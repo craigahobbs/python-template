@@ -1,5 +1,5 @@
 {# Delete this utility file #}
-{% template_specialize_rename 'python-command-line.txt' %}
+{% template_specialize_rename 'python-package.txt' %}
 
 {# Rename package source directory #}
 {% template_specialize_rename 'src/package-name', package | replace("-", "_") %}
