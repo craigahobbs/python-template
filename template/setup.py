@@ -1,5 +1,5 @@
 # Licensed under the MIT License
-# https://github.com/craigahobbs/{{package}}/blob/main/LICENSE
+# https://github.com/{{github}}/{{package}}/blob/main/LICENSE
 
 import os
 
@@ -18,10 +18,10 @@ def main():
         long_description=long_description,
         long_description_content_type='text/markdown',
         version='0.9.0',
-        author='Craig Hobbs',
-        author_email='craigahobbs@gmail.com',
+        author='{{name}}',
+        author_email='{{email}}',
         keywords='{{package}}',
-        url='https://github.com/craigahobbs/{{package}}',
+        url='https://github.com/{{github}}/{{package}}',
         license='MIT',
         classifiers=[
             'Development Status :: 5 - Production/Stable',
