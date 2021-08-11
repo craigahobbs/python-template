@@ -1,5 +1,22 @@
 {# Delete this utility file #}
 {% template_specialize_rename 'python-package.txt' %}
 
+{# Delete the package documentation, if requested #}
+{% if nodoc is defined and nodoc %}
+  {% template_specialize_rename 'README.rst' %}
+  {% template_specialize_rename 'doc' %}
+{% else %}
+  {% template_specialize_rename 'README.md' %}
+{% endif %}
+
+{# Delete the module main, if requested #}
+{% if nomain is defined and nomain %}
+  {% template_specialize_rename 'src/package-name/__main__.py' %}
+  {% template_specialize_rename 'src/package-name/main.py' %}
+  {% template_specialize_rename 'src/tests/test_main.py' %}
+{% else %}
+  {% template_specialize_rename 'src/tests/test.py' %}
+{% endif %}
+
 {# Rename package source directory #}
 {% template_specialize_rename 'src/package-name', package | replace("-", "_") %}

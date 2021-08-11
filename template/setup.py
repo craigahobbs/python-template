@@ -8,7 +8,7 @@ from setuptools import setup
 
 def main():
     # Read the readme for use as the long description
-    with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'README.md'), encoding='utf-8') as readme_file:
+    with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'README{{".md" if nodoc is defined and nodoc else ".rst"}}'), encoding='utf-8') as readme_file:
         long_description = readme_file.read()
 
     # Do the setup
@@ -36,12 +36,12 @@ def main():
             'Topic :: Utilities'
         ],
         package_dir={'': 'src'},
-        packages=['{{package | replace("-", "_")}}'],
+        packages=['{{package | replace("-", "_")}}']{% if nomain is not defined or not nomain %},
         entry_points={
             'console_scripts': [
                 '{{package}} = {{package | replace("-", "_")}}.main:main'
             ]
-        }
+        }{% endif %}
     )
 
 if __name__ == '__main__':
