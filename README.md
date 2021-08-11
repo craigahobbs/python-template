@@ -37,7 +37,7 @@ The following template variables are defined:
 
 - **name** - the package author's full name (e.g. "John Doe")
 
-- **email** - the package author's email address (e.g. "johndoe@gmail.com")
+- **email** - the package author's email address
 
 - **github** - the package author's GitHub account name (e.g. "johndoe")
 
