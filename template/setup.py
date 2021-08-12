@@ -16,7 +16,7 @@ def main():
         name='{{package}}',
         description='{{package}}',
         long_description=long_description,
-        long_description_content_type='text/markdown',
+        long_description_content_type='{{ "text/markdown" if nodoc is defined and nodoc else "text/x-rst" }}',
         version='0.9.0',
         author='{{name}}',
         author_email='{{email}}',

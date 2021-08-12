@@ -19,6 +19,6 @@ SPHINX_DOC := doc
 include Makefile.base
 
 clean:
-	rm -rf Makefile.base pylintrc
+	rm -rf Makefile.base pylintrc{% if nodoc is defined and nodoc %}
 
-PYLINT_ARGS := $(PYLINT_ARGS) --disable=missing-docstring
+PYLINT_ARGS := $(PYLINT_ARGS) --disable=missing-docstring{% endif %}
