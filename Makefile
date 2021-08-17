@@ -17,6 +17,7 @@ commit: test lint
 .PHONY: clean
 clean:
 	rm -rf build __pycache__ test_actual/
+	$(foreach DIR, $(wildcard test_expected/*),$(MAKE) -C $(DIR) clean &&) :
 
 
 .PHONY: superclean
