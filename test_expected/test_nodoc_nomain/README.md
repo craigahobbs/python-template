@@ -10,4 +10,15 @@ Coming soon!
 
 ## Development
 
-This project is developed using [Python Build](https://github.com/craigahobbs/python-build#readme).
+This project is developed using [Python Build](https://github.com/craigahobbs/python-build#readme). It was started
+using [python-package-template](https://github.com/craigahobbs/python-package-template#readme) as follows:
+
+```
+template-specialize python-package-template/template/ package-name/ \
+    -k package package-name \
+    -k name "John Doe" \
+    -k email "johndoe@gmail.com" \
+    -k github "johndoe" \
+    -k nodoc 1
+    -k nomain 1
+```
