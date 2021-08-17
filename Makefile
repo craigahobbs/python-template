@@ -25,7 +25,8 @@ superclean: clean
 
 .PHONY: test
 test: build/venv.build
-	python3 -m unittest -v tests.py
+	python3 -m unittest -v $(if $(TEST),$(TEST),tests.py)
+	rm -rf test_actual/
 
 
 .PHONY: lint

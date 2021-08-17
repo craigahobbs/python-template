@@ -20,24 +20,17 @@ class PythonPackageTemplateTest(unittest.TestCase):
         for subdir_dcmp in dcmp.subdirs.values():
             self.assert_dcmp(subdir_dcmp)
 
-    def test_required(self):
+    def _test_template(self, test_name, template_args, no_compile=False):
 
         # Ensure the actual directory is non-existent
-        expected_dir = os.path.join('test_expected', 'test_required')
-        actual_root = 'test_actual'
-        actual_dir = os.path.join(actual_root, 'test_required')
+        expected_dir = os.path.join('test_expected', test_name)
+        actual_dir = os.path.join('test_actual', test_name)
         if os.path.exists(actual_dir):
-            shutil.rmtree(actual_root)
+            shutil.rmtree(actual_dir)
 
         # Render the template
         output = subprocess.check_output(
-            [
-                'build/venv/bin/template-specialize', 'template/', actual_dir,
-                '-k', 'package', 'package-name',
-                '-k', 'name', 'John Doe',
-                '-k', 'email', 'johndoe@gmail.com',
-                '-k', 'github', 'johndoe'
-            ],
+            ['build/venv/bin/template-specialize', 'template/', actual_dir, *template_args],
             env={},
             stderr=subprocess.STDOUT,
             encoding='utf-8'
@@ -48,13 +41,77 @@ class PythonPackageTemplateTest(unittest.TestCase):
         self.assert_dcmp(filecmp.dircmp(expected_dir, actual_dir))
 
         # Run "make commit" on rendered template
-        actual_make = subprocess.check_output(
-            ['make', '-C', actual_dir, 'commit'],
-            env={'PATH': os.getenv('PATH')},
-            stderr=subprocess.STDOUT,
-            encoding='utf-8'
-        )
-        self.assertNotEqual(actual_make, '')
+        if not no_compile:
+            actual_make = subprocess.check_output(
+                ['make', '-C', actual_dir, 'commit'],
+                env={'PATH': os.getenv('PATH')},
+                stderr=subprocess.STDOUT,
+                encoding='utf-8'
+            )
+            self.assertNotEqual(actual_make, '')
 
         # Delete the actual directory
-        shutil.rmtree(actual_root)
+        shutil.rmtree(actual_dir)
+
+    def test_required(self):
+        self._test_template(
+            'test_required',
+            [
+                '-k', 'package', 'package-name',
+                '-k', 'name', 'John Doe',
+                '-k', 'email', 'johndoe@gmail.com',
+                '-k', 'github', 'johndoe'
+            ]
+        )
+
+    def test_nodoc_0_nomain_0(self):
+        # Same template output as test_required
+        self._test_template(
+            'test_required',
+            [
+                '-k', 'package', 'package-name',
+                '-k', 'name', 'John Doe',
+                '-k', 'email', 'johndoe@gmail.com',
+                '-k', 'github', 'johndoe',
+                '-k', 'nodoc', '0',
+                '-k', 'nomain', '0'
+            ],
+            no_compile=True
+        )
+
+    def test_nodoc(self):
+        self._test_template(
+            'test_nodoc',
+            [
+                '-k', 'package', 'package-name',
+                '-k', 'name', 'John Doe',
+                '-k', 'email', 'johndoe@gmail.com',
+                '-k', 'github', 'johndoe',
+                '-k', 'nodoc', '1'
+            ]
+        )
+
+    def test_nomain(self):
+        self._test_template(
+            'test_nomain',
+            [
+                '-k', 'package', 'package-name',
+                '-k', 'name', 'John Doe',
+                '-k', 'email', 'johndoe@gmail.com',
+                '-k', 'github', 'johndoe',
+                '-k', 'nomain', '1'
+            ]
+        )
+
+    def test_nodoc_nomain(self):
+        self._test_template(
+            'test_nodoc_nomain',
+            [
+                '-k', 'package', 'package-name',
+                '-k', 'name', 'John Doe',
+                '-k', 'email', 'johndoe@gmail.com',
+                '-k', 'github', 'johndoe',
+                '-k', 'nodoc', '1',
+                '-k', 'nomain', '1'
+            ]
+        )

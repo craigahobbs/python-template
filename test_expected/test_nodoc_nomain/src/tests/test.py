@@ -1,14 +1,14 @@
 # Licensed under the MIT License
-# https://github.com/{{github}}/{{package}}/blob/main/LICENSE
+# https://github.com/johndoe/package-name/blob/main/LICENSE
 
 # pylint: disable=missing-class-docstring, missing-function-docstring, missing-module-docstring
 
 import unittest
 
-import {{package | replace("-", "_")}}
+import package_name
 
 
 class Test(unittest.TestCase):
 
     def test_import(self):
-        self.assertTrue({{package | replace("-", "_")}})
+        self.assertTrue(package_name)
