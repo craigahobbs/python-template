@@ -1,5 +1,5 @@
 # Licensed under the MIT License
-# https://github.com/{{github}}/{{package}}/blob/main/LICENSE
+# https://github.com/johndoe/package-name/blob/main/LICENSE
 
 # pylint: disable=missing-function-docstring, missing-module-docstring
 
@@ -10,20 +10,20 @@ from setuptools import setup
 
 def main():
     # Read the readme for use as the long description
-    with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'README{{".md" if nodoc is defined and nodoc else ".rst"}}'), encoding='utf-8') as readme_file:
+    with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'README.rst'), encoding='utf-8') as readme_file:
         long_description = readme_file.read()
 
     # Do the setup
     setup(
-        name='{{package}}',
-        description='{{package}}',
+        name='package-name',
+        description='package-name',
         long_description=long_description,
-        long_description_content_type='{{ "text/markdown" if nodoc is defined and nodoc else "text/x-rst" }}',
+        long_description_content_type='text/x-rst',
         version='0.9.0',
-        author='{{name}}',
-        author_email='{{email}}',
-        keywords='{{package}}',
-        url='https://github.com/{{github}}/{{package}}',
+        author='John Doe',
+        author_email='johndoe@gmail.com',
+        keywords='package-name',
+        url='https://github.com/johndoe/package-name',
         license='MIT',
         classifiers=[
             'Development Status :: 5 - Production/Stable',
@@ -38,12 +38,12 @@ def main():
             'Topic :: Utilities'
         ],
         package_dir={'': 'src'},
-        packages=['{{package | replace("-", "_")}}']{% if nomain is not defined or not nomain %},
+        packages=['package_name'],
         entry_points={
             'console_scripts': [
-                '{{package}} = {{package | replace("-", "_")}}.main:main'
+                'package-name = package_name.main:main'
             ]
-        }{% endif %}
+        }
     )
 
 

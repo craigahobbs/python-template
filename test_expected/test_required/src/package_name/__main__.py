@@ -1,8 +1,8 @@
 # Licensed under the MIT License
-# https://github.com/{{github}}/{{package}}/blob/main/LICENSE
+# https://github.com/johndoe/package-name/blob/main/LICENSE
 
 """
-{{package}} top-level script environment
+package-name top-level script environment
 """
 
 from .main import main
