@@ -13,7 +13,7 @@ import unittest.mock
 
 class PythonPackageTemplateTest(unittest.TestCase):
 
-    LEFT_ONLY_EXCLUDE = ['.coverage', 'Makefile.base', 'build', 'pylintrc']
+    LEFT_ONLY_EXCLUDE = ['.coverage', '.docker', 'Makefile.base', 'build', 'pylintrc']
     LEFT_ONLY_EXCLUDE_EXT = ['.egg-info']
 
     def assert_dcmp(self, dcmp):
