@@ -1,3 +1,9 @@
+## 2021-08-18
+
+- [3c9cd84](https://github.com/craigahobbs/python-package-template/commit/3c9cd84) - pylint pragma cleanup
+
+- [8aee63d](https://github.com/craigahobbs/python-package-template/commit/8aee63d) - run unit tests in parallel
+
 ## 2021-08-17
 
 - [76f9ee7](https://github.com/craigahobbs/python-package-template/commit/76f9ee7) - fix tests on mac
