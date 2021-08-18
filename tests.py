@@ -30,7 +30,7 @@ class PythonPackageTemplateTest(unittest.TestCase):
         for subdir_dcmp in dcmp.subdirs.values():
             self.assert_dcmp(subdir_dcmp)
 
-    def _test_template(self, test_name, template_args, no_compile=False):
+    def _test_template(self, test_name, template_args):
 
         # Ensure the actual directory is non-existent
         expected_dir = os.path.join('test_expected', test_name)
@@ -51,14 +51,13 @@ class PythonPackageTemplateTest(unittest.TestCase):
         self.assert_dcmp(filecmp.dircmp(expected_dir, actual_dir))
 
         # Run "make commit" on rendered template
-        if not no_compile:
-            compile_output = subprocess.check_output(
-                ['make', '-C', expected_dir, 'commit'],
-                env={'PATH': os.getenv('PATH')},
-                stderr=subprocess.STDOUT,
-                encoding='utf-8'
-            )
-            self.assertNotEqual(compile_output, '')
+        compile_output = subprocess.check_output(
+            ['make', '-C', expected_dir, 'commit'],
+            env={'PATH': os.getenv('PATH')},
+            stderr=subprocess.STDOUT,
+            encoding='utf-8'
+        )
+        self.assertNotEqual(compile_output, '')
 
         # Delete the actual directory
         shutil.rmtree(actual_dir)
@@ -72,21 +71,6 @@ class PythonPackageTemplateTest(unittest.TestCase):
                 '-k', 'email', 'johndoe@gmail.com',
                 '-k', 'github', 'johndoe'
             ]
-        )
-
-    def test_nodoc_0_nomain_0(self):
-        # Same template output as test_required
-        self._test_template(
-            'test_required',
-            [
-                '-k', 'package', 'package-name',
-                '-k', 'name', 'John Doe',
-                '-k', 'email', 'johndoe@gmail.com',
-                '-k', 'github', 'johndoe',
-                '-k', 'nodoc', '0',
-                '-k', 'nomain', '0'
-            ],
-            no_compile=True
         )
 
     def test_nodoc(self):
@@ -123,5 +107,18 @@ class PythonPackageTemplateTest(unittest.TestCase):
                 '-k', 'github', 'johndoe',
                 '-k', 'nodoc', '1',
                 '-k', 'nomain', '1'
+            ]
+        )
+
+    def test_nodoc_0_nomain_0(self):
+        self._test_template(
+            'test_nodoc_0_nomain_0',
+            [
+                '-k', 'package', 'package-name',
+                '-k', 'name', 'John Doe',
+                '-k', 'email', 'johndoe@gmail.com',
+                '-k', 'github', 'johndoe',
+                '-k', 'nodoc', '0',
+                '-k', 'nomain', '0'
             ]
         )

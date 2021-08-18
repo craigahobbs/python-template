@@ -26,7 +26,11 @@ superclean: clean
 
 .PHONY: test
 test: build/venv.build
-	python3 -m unittest -v $(if $(TEST),$(TEST),tests.py)
+ifneq '$(TEST)' ''
+	python3 -m unittest -v $(TEST)
+else
+	build/venv/bin/unittest-parallel -v -t . -s . -p tests.py
+endif
 	rm -rf test_actual/
 
 
@@ -43,5 +47,6 @@ changelog: build/venv.build
 build/venv.build:
 	python3 -m venv build/venv
 	build/venv/bin/pip --disable-pip-version-check --no-cache-dir install --progress-bar off -U pip setuptools wheel
-	build/venv/bin/pip --disable-pip-version-check --no-cache-dir install --progress-bar off pylint=="$(PYLINT_VERSION)" simple-git-changelog template-specialize
+	build/venv/bin/pip --disable-pip-version-check --no-cache-dir install --progress-bar off \
+		pylint=="$(PYLINT_VERSION)" simple-git-changelog template-specialize unittest-parallel
 	touch $@
