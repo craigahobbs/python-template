@@ -1,5 +1,9 @@
 ## 2021-08-17
 
+- [76f9ee7](https://github.com/craigahobbs/python-package-template/commit/76f9ee7) - fix tests on mac
+
+- [56ebdcd](https://github.com/craigahobbs/python-package-template/commit/56ebdcd) - update comment
+
 - [13a1c70](https://github.com/craigahobbs/python-package-template/commit/13a1c70) - fix template-specialize usage
 
 - [43b1516](https://github.com/craigahobbs/python-package-template/commit/43b1516) - remove nodoc pylint disables
