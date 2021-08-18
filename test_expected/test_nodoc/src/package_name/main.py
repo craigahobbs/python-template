@@ -13,7 +13,7 @@ def main(argv=None):
     package-name command-line script main entry point
     """
 
-    # Command line parsing
+    # Command line arguments
     parser = argparse.ArgumentParser(prog='package-name')
     parser.add_argument('numbers', metavar='N', type=float, nargs='+',
                         help='an integer for the accumulator')
