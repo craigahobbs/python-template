@@ -41,7 +41,6 @@ class PythonPackageTemplateTest(unittest.TestCase):
         # Render the template
         render_output = subprocess.check_output(
             ['build/venv/bin/template-specialize', 'template/', actual_dir, *template_args],
-            env={},
             stderr=subprocess.STDOUT,
             encoding='utf-8'
         )
@@ -50,10 +49,16 @@ class PythonPackageTemplateTest(unittest.TestCase):
         # Compare the rendered template to the expected
         self.assert_dcmp(filecmp.dircmp(expected_dir, actual_dir))
 
+        # Remove make environment variables from the compile environment
+        compile_env = dict(os.environ)
+        for key in ('MAKEFLAGS', 'MAKELEVEL', 'MFLAGS'):
+            if key in compile_env:
+                del compile_env[key]
+
         # Run "make commit" on rendered template
         compile_output = subprocess.check_output(
             ['make', '-C', expected_dir, 'commit'],
-            env={'PATH': os.getenv('PATH')},
+            env=compile_env,
             stderr=subprocess.STDOUT,
             encoding='utf-8'
         )
