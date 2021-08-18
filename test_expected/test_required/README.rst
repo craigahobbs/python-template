@@ -40,4 +40,4 @@ using `python-package-template <https://github.com/craigahobbs/python-package-te
         -k package package-name \
         -k name "John Doe" \
         -k email "johndoe@gmail.com" \
-        -k github "johndoe" \
+        -k github "johndoe"

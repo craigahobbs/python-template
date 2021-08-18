@@ -18,7 +18,7 @@ template-specialize python-package-template/template/ {{package}}/ \
     -k package {{package}} \
     -k name "{{name}}" \
     -k email "{{email}}" \
-    -k github "{{github}}" \{% if nodoc is defined and nodoc %}
-    -k nodoc 1{% endif %}{% if nomain is defined and nomain %}
+    -k github "{{github}}"{% if nodoc is defined and nodoc %} \
+    -k nodoc 1{% endif %}{% if nomain is defined and nomain %} \
     -k nomain 1{% endif %}
 ```

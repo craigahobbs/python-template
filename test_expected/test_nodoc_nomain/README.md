@@ -19,6 +19,6 @@ template-specialize python-package-template/template/ package-name/ \
     -k name "John Doe" \
     -k email "johndoe@gmail.com" \
     -k github "johndoe" \
-    -k nodoc 1
+    -k nodoc 1 \
     -k nomain 1
 ```

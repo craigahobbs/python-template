@@ -40,6 +40,6 @@ using `python-package-template <https://github.com/craigahobbs/python-package-te
         -k package {{package}} \
         -k name "{{name}}" \
         -k email "{{email}}" \
-        -k github "{{github}}" \{% if nodoc is defined and nodoc %}
-        -k nodoc 1{% endif %}{% if nomain is defined and nomain %}
+        -k github "{{github}}"{% if nodoc is defined and nodoc %} \
+        -k nodoc 1{% endif %}{% if nomain is defined and nomain %} \
         -k nomain 1{% endif %}
