@@ -1,5 +1,7 @@
 ## 2021-08-17
 
+- [13a1c70](https://github.com/craigahobbs/python-package-template/commit/13a1c70) - fix template-specialize usage
+
 - [43b1516](https://github.com/craigahobbs/python-package-template/commit/43b1516) - remove nodoc pylint disables
 
 - [b78afeb](https://github.com/craigahobbs/python-package-template/commit/b78afeb) - add python-package-template command to readme
