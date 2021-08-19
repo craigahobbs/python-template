@@ -30,10 +30,7 @@ template-specialize python-package-template/template/ my-package/ \
     -k github "johndoe"
 ```
 
-
-## Template Variables
-
-The following template variables are defined:
+The template exposes the following template variables:
 
 - **package** - the Python package name (e.g. "my-package")
 
