@@ -3,22 +3,22 @@
 **python-package-template** is a Python package template for use with
 [template-specialize](https://pypi.org/project/template-specialize/).
 
-The generated Python packages have the following characteristics:
+The generated Python package has the following functionality:
 
 - uses [Python Build](https://github.com/craigahobbs/python-build#readme) for build and development experience
 
 - setup.py ready to upload to [PyPI](https://pypi.org/)
 
-- command-line script (same as the [package main](https://docs.python.org/3/library/__main__.html))
+- command-line script (optional, same as the [package main](https://docs.python.org/3/library/__main__.html))
 
-- package documentation generated with [Sphinx](https://pypi.org/project/Sphinx/)
+- package documentation generated with [Sphinx](https://pypi.org/project/Sphinx/) (optional)
 
-- 100% unit-test coverage
+- 100% unit-test coverage ("make cover" fails if actual coverage is less than 100%)
 
 
 ## Usage
 
-To generate a Python package project, render it using template-specialize with specify the required template variables:
+To generate a new Python package project, render it using template-specialize:
 
 ```
 template-specialize python-package-template/template/ my-package/ \
