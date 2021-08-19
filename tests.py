@@ -57,7 +57,7 @@ class PythonPackageTemplateTest(unittest.TestCase):
 
         # Run "make commit" on rendered template
         compile_output = subprocess.check_output(
-            ['make', '-C', expected_dir, 'commit'],
+            ['make', '-C', actual_dir, 'commit'],
             env=compile_env,
             stderr=subprocess.STDOUT,
             encoding='utf-8'
