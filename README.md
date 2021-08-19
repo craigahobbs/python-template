@@ -3,17 +3,19 @@
 **python-package-template** is a Python package template for use with
 [template-specialize](https://pypi.org/project/template-specialize/).
 
-The generated Python package has the following functionality:
+All generated projects have the following functionality:
 
-- uses [Python Build](https://github.com/craigahobbs/python-build#readme) for build and development experience
+- use [Python Build](https://github.com/craigahobbs/python-build#readme) for build and development experience
 
-- setup.py ready to upload to [PyPI](https://pypi.org/)
+- contain setup.py ready to upload to [PyPI](https://pypi.org/)
 
-- command-line script (optional, same as the [package main](https://docs.python.org/3/library/__main__.html))
+- setup installs command-line script and [package main](https://docs.python.org/3/library/__main__.html) (optional)
 
-- package documentation generated with [Sphinx](https://pypi.org/project/Sphinx/) (optional)
+- generates package documentation with [Sphinx](https://pypi.org/project/Sphinx/) (optional)
 
-- 100% unit-test coverage ("make cover" fails if actual coverage is less than 100%)
+- publishes package documentation to [GitHub Pages](https://pages.github.com/) (optional)
+
+- 100% unit-test code coverage ("make cover" fails if coverage is less than configurable minimum)
 
 
 ## Usage
@@ -41,6 +43,6 @@ The following template variables are defined:
 
 - **github** - the package author's GitHub account name (e.g. "johndoe")
 
-- **nodoc** (optional) - if true, package documentation is omitted from the generated project
+- **nodoc** (optional) - if true, the package documentation is omitted
 
-- **nomain** (optional) - if true, package main is omitted from the generated project
+- **nomain** (optional) - if true, the command-line script and package main are omitted
