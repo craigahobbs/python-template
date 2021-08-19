@@ -2,6 +2,16 @@
 # https://github.com/craigahobbs/python-build/blob/main/LICENSE
 
 
+# Download Python Build's pylintrc (for unit test static analysis)
+define WGET
+ifeq '$$(wildcard $(notdir $(1)))' ''
+$$(info Downloading $(notdir $(1)))
+_WGET := $$(shell if which wget; then wget -q $(1); else curl -Os $(1); fi)
+endif
+endef
+$(eval $(call WGET, https://raw.githubusercontent.com/craigahobbs/python-build/main/pylintrc))
+
+
 PYLINT_VERSION ?= 2.9.*
 
 
@@ -16,7 +26,7 @@ commit: test lint
 
 .PHONY: clean
 clean:
-	rm -rf build __pycache__ test_actual/
+	rm -rf __pycache__/ build/ test_actual/ pylintrc
 	$(foreach DIR, $(wildcard test_expected/*),$(MAKE) -C $(DIR) clean &&) :
 
 
