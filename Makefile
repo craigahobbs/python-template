@@ -1,5 +1,5 @@
 # Licensed under the MIT License
-# https://github.com/craigahobbs/python-build/blob/main/LICENSE
+# https://github.com/craigahobbs/python-package-template/blob/main/LICENSE
 
 
 # Download Python Build's pylintrc (for unit test static analysis)

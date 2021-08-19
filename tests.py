@@ -1,5 +1,5 @@
 # Licensed under the MIT License
-# https://github.com/craigahobbs/python-build/blob/main/LICENSE
+# https://github.com/craigahobbs/python-package-template/blob/main/LICENSE
 
 # pylint: disable=missing-class-docstring, missing-function-docstring, missing-module-docstring
 

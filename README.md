@@ -5,7 +5,7 @@
 
 All generated packages have the following functionality:
 
-- use [Python Build](https://github.com/craigahobbs/python-build#readme) for build and development experience
+- uses [Python Build](https://github.com/craigahobbs/python-build#readme) for build/development experience
 
 - contain setup.py ready to upload to [PyPI](https://pypi.org/)
 
