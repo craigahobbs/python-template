@@ -3,7 +3,7 @@
 **python-package-template** is a Python package template for use with
 [template-specialize](https://pypi.org/project/template-specialize/).
 
-All generated projects have the following functionality:
+All generated packages have the following functionality:
 
 - use [Python Build](https://github.com/craigahobbs/python-build#readme) for build and development experience
 
@@ -18,9 +18,9 @@ All generated projects have the following functionality:
 - 100% unit-test code coverage ("make cover" fails if coverage is less than configurable minimum)
 
 
-## Usage
+## Create a New Python Package
 
-To generate a new Python package project, clone this repository and render the template directory using template-specialize:
+To generate a new Python package, clone this repository and render the template directory using template-specialize:
 
 ```
 template-specialize python-package-template/template/ my-package/ \
