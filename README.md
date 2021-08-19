@@ -20,7 +20,7 @@ All generated projects have the following functionality:
 
 ## Usage
 
-To generate a new Python package project, render it using template-specialize:
+To generate a new Python package project, clone this repository and render the template directory using template-specialize:
 
 ```
 template-specialize python-package-template/template/ my-package/ \
