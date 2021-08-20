@@ -13,19 +13,9 @@ import unittest.mock
 
 class PythonPackageTemplateTest(unittest.TestCase):
 
-    LEFT_ONLY_EXCLUDE = ['.coverage', '.docker', 'Makefile.base', 'build', 'pylintrc']
-    LEFT_ONLY_EXCLUDE_EXT = ['.egg-info']
-
     def assert_dcmp(self, dcmp):
         self.assertListEqual(dcmp.diff_files, [])
-        self.assertListEqual(
-            [
-                file_ for file_ in dcmp.left_only if
-                (file_ not in self.LEFT_ONLY_EXCLUDE and
-                 not any(file_.endswith(ext) for ext in self.LEFT_ONLY_EXCLUDE_EXT))
-            ],
-            []
-        )
+        self.assertListEqual(dcmp.left_only, [])
         self.assertListEqual(dcmp.right_only, [])
         for subdir_dcmp in dcmp.subdirs.values():
             self.assert_dcmp(subdir_dcmp)
