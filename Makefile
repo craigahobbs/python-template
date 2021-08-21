@@ -2,46 +2,57 @@
 # https://github.com/craigahobbs/python-package-template/blob/main/LICENSE
 
 
-# Download Python Build's pylintrc (for unit test static analysis)
-define WGET
-ifeq '$$(wildcard $(notdir $(1)))' ''
-$$(info Downloading $(notdir $(1)))
-_WGET := $$(shell if which wget; then wget -q $(1); else curl -Os $(1); fi)
-endif
-endef
-$(eval $(call WGET, https://raw.githubusercontent.com/craigahobbs/python-build/main/pylintrc))
-
-
-PYLINT_VERSION ?= 2.9.*
-
-
 .PHONY: help
 help:
-	@echo 'usage: make [changelog|clean|commit|lint|superclean|test]'
+	@echo 'usage: make [changelog|clean|commit|superclean|test]'
 
 
 .PHONY: commit
-commit: test lint
+commit: test
 
 
 .PHONY: clean
 clean:
-	rm -rf __pycache__/ build/ test_actual/ pylintrc
+	rm -rf build/ test_actual/
 
 
 .PHONY: superclean
 superclean: clean
 
 
+# Test rule function - name, template args
+define TEST_RULE
+test: test-$(strip $(1))
+
+.PHONY: test-$(strip $(1))
+test-$(strip $(1)): build/venv.build
+	rm -rf test_actual/test_$(strip $(1))/
+	build/venv/bin/template-specialize template/ test_actual/test_$(strip $(1))/ $(strip $(2))
+	diff -r test_actual/test_$(strip $(1))/ test_expected/test_$(strip $(1))/
+	$$(MAKE) -C test_actual/test_$(strip $(1))/ commit
+	rm -rf test_actual/test_$(strip $(1))/
+endef
+
+
+# Test rules
 .PHONY: test
-test: build/venv.build
-	python3 -m unittest -v $(if $(TEST),$(TEST),tests.py)
+test:
 	rm -rf test_actual/
 
+$(eval $(call TEST_RULE, required, \
+    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe'))
 
-.PHONY: lint
-lint: build/venv.build
-	build/venv/bin/pylint tests.py
+$(eval $(call TEST_RULE, nodoc, \
+    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k nodoc 1))
+
+$(eval $(call TEST_RULE, nomain, \
+    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k nomain 1))
+
+$(eval $(call TEST_RULE, nodoc_nomain, \
+    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k nodoc 1 -k nomain 1))
+
+$(eval $(call TEST_RULE, nodoc_0_nomain_0, \
+    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k nodoc 0 -k nomain 0))
 
 
 .PHONY: changelog
@@ -52,5 +63,5 @@ changelog: build/venv.build
 build/venv.build:
 	python3 -m venv build/venv
 	build/venv/bin/pip -q install --progress-bar off -U pip setuptools wheel
-	build/venv/bin/pip -q install --progress-bar off pylint=="$(PYLINT_VERSION)" simple-git-changelog template-specialize
+	build/venv/bin/pip -q install --progress-bar off simple-git-changelog template-specialize
 	touch $@
