@@ -1,5 +1,5 @@
 {# Delete this utility file #}
-{% template_specialize_rename 'python-package.txt' %}
+{% template_specialize_rename 'python-template.txt' %}
 
 {# Delete the package documentation, if requested #}
 {% if nodoc is defined and nodoc %}

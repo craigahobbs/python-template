@@ -1,6 +1,6 @@
-# python-package-template
+# python-template
 
-**python-package-template** is a Python package template for use with
+**python-template** is a Python package template for use with
 [template-specialize](https://pypi.org/project/template-specialize/).
 
 All generated packages have the following functionality:
@@ -23,7 +23,7 @@ All generated packages have the following functionality:
 To generate a new Python package, clone this repository and render the template directory using template-specialize:
 
 ```
-template-specialize python-package-template/template/ my-package/ \
+template-specialize python-template/template/ my-package/ \
     -k package "my-package" \
     -k name "John Doe" \
     -k email "johndoe@gmail.com" \

@@ -1,5 +1,5 @@
 # Licensed under the MIT License
-# https://github.com/craigahobbs/python-package-template/blob/main/LICENSE
+# https://github.com/craigahobbs/python-template/blob/main/LICENSE
 
 
 .PHONY: help
