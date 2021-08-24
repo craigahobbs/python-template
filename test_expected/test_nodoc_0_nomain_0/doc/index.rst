@@ -4,6 +4,8 @@
    :caption: Contents:
    :maxdepth: 1
 
+   reference
+
 
 Index
 -----

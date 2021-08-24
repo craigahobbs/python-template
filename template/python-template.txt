@@ -1,12 +1,16 @@
 {# Delete this utility file #}
 {% template_specialize_rename 'python-template.txt' %}
 
-{# Delete the package documentation, if requested #}
+{# Delete the package API, if requested #}
 {% if nodoc is defined and nodoc %}
   {% template_specialize_rename 'README.rst' %}
   {% template_specialize_rename 'doc' %}
+  {% template_specialize_rename 'src/package-name/package_name.py' %}
+  {% template_specialize_rename 'src/tests/test_package_name.py' %}
 {% else %}
   {% template_specialize_rename 'README.md' %}
+  {% template_specialize_rename 'src/package-name/package_name.py', package.replace('-', '_') + '.py' %}
+  {% template_specialize_rename 'src/tests/test_package_name.py', 'test_' + package.replace('-', '_') + '.py' %}
 {% endif %}
 
 {# Delete the module main, if requested #}
@@ -14,8 +18,11 @@
   {% template_specialize_rename 'src/package-name/__main__.py' %}
   {% template_specialize_rename 'src/package-name/main.py' %}
   {% template_specialize_rename 'src/tests/test_main.py' %}
-{% else %}
-  {% template_specialize_rename 'src/tests/test.py' %}
+{% endif %}
+
+{# Delete the fallback unit test file, unless its needed #}
+{% if (nodoc is not defined or not nodoc) or (nomain is not defined or not nomain) %}
+{% template_specialize_rename 'src/tests/test.py' %}
 {% endif %}
 
 {# Rename package source directory #}

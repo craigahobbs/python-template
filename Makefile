@@ -26,6 +26,7 @@ test: test-$(strip $(1))
 
 .PHONY: test-$(strip $(1))
 test-$(strip $(1)): build/venv.build
+	@echo 'Testing "$(strip $(1))"...'
 	rm -rf test_actual/test_$(strip $(1))/
 	build/venv/bin/template-specialize template/ test_actual/test_$(strip $(1))/ $(strip $(2))
 	diff -r test_actual/test_$(strip $(1))/ test_expected/test_$(strip $(1))/
@@ -38,6 +39,7 @@ endef
 .PHONY: test
 test:
 	rm -rf test_actual/
+	@echo Tests completed - all passed
 
 $(eval $(call TEST_RULE, required, \
     -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe'))
