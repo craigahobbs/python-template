@@ -1,3 +1,9 @@
+## 2021-08-24
+
+- [1a09dfc](https://github.com/craigahobbs/python-template/commit/1a09dfc) - rename nodoc option to noapi
+
+- [66bf1d8](https://github.com/craigahobbs/python-template/commit/66bf1d8) - add example api
+
 ## 2021-08-18
 
 - [d02a94e](https://github.com/craigahobbs/python-template/commit/d02a94e) - Don't use unittest-parallel - docker on mac is too unsable. Also, allow use of NO_DOCKER in rendered template compile tests.
