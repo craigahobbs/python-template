@@ -13,7 +13,7 @@ commit: test
 
 .PHONY: clean
 clean:
-	rm -rf build/ test_actual/
+	rm -rf build/ test-actual/
 
 
 .PHONY: superclean
@@ -27,34 +27,34 @@ test: test-$(strip $(1))
 .PHONY: test-$(strip $(1))
 test-$(strip $(1)): build/venv.build
 	@echo 'Testing "$(strip $(1))"...'
-	rm -rf test_actual/test_$(strip $(1))/
-	build/venv/bin/template-specialize template/ test_actual/test_$(strip $(1))/ $(strip $(2))
-	diff -r test_actual/test_$(strip $(1))/ test_expected/test_$(strip $(1))/
-	$$(MAKE) -C test_actual/test_$(strip $(1))/ commit
-	rm -rf test_actual/test_$(strip $(1))/
+	rm -rf test-actual/$(strip $(1))/
+	build/venv/bin/template-specialize template/ test-actual/$(strip $(1))/ $(strip $(2))
+	diff -r test-actual/$(strip $(1))/ test-expected/$(strip $(1))/
+	$$(MAKE) -C test-actual/$(strip $(1))/ commit
+	rm -rf test-actual/$(strip $(1))/
 endef
 
 
 # Test rules
 .PHONY: test
 test:
-	rm -rf test_actual/
+	rm -rf test-actual/
 	@echo Tests completed - all passed
 
 $(eval $(call TEST_RULE, required, \
     -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe'))
 
-$(eval $(call TEST_RULE, nodoc, \
-    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k nodoc 1))
+$(eval $(call TEST_RULE, noapi, \
+    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 1))
 
 $(eval $(call TEST_RULE, nomain, \
     -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k nomain 1))
 
-$(eval $(call TEST_RULE, nodoc_nomain, \
-    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k nodoc 1 -k nomain 1))
+$(eval $(call TEST_RULE, noapi-nomain, \
+    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 1 -k nomain 1))
 
-$(eval $(call TEST_RULE, nodoc_0_nomain_0, \
-    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k nodoc 0 -k nomain 0))
+$(eval $(call TEST_RULE, noapi-0-nomain-0, \
+    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 0 -k nomain 0))
 
 
 .PHONY: changelog

@@ -14,5 +14,5 @@ This project is developed using [Python Build](https://github.com/craigahobbs/py
 using [python-template](https://github.com/craigahobbs/python-template#readme) as follows:
 
 ```
-template-specialize python-template/template/ {{package}}/ -k package {{package}} -k name '{{name}}' -k email '{{email}}' -k github '{{github}}'{% if nodoc is defined and nodoc %} -k nodoc 1{% endif %}{% if nomain is defined and nomain %} -k nomain 1{% endif %}
+template-specialize python-template/template/ {{package}}/ -k package {{package}} -k name '{{name}}' -k email '{{email}}' -k github '{{github}}'{% if noapi is defined and noapi %} -k noapi 1{% endif %}{% if nomain is defined and nomain %} -k nomain 1{% endif %}
 ```

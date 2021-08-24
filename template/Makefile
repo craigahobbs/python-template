@@ -11,7 +11,7 @@ endef
 WGET_CMD = if which wget; then wget -q -c $(1); else curl -Os $(1); fi
 $(eval $(call WGET, https://raw.githubusercontent.com/craigahobbs/python-build/main/Makefile.base))
 $(eval $(call WGET, https://raw.githubusercontent.com/craigahobbs/python-build/main/pylintrc))
-{% if nodoc is not defined or not nodoc %}
+{% if noapi is not defined or not noapi %}
 # Sphinx documentation directory
 SPHINX_DOC := doc
 {% endif %}
@@ -19,6 +19,6 @@ SPHINX_DOC := doc
 include Makefile.base
 
 clean:
-	rm -rf Makefile.base pylintrc{% if nodoc is defined and nodoc %}
+	rm -rf Makefile.base pylintrc{% if noapi is defined and noapi %}
 
 PYLINT_ARGS := $(PYLINT_ARGS) --disable=missing-class-docstring --disable=missing-function-docstring --disable=missing-module-docstring{% endif %}

@@ -2,7 +2,7 @@
 {% template_specialize_rename 'python-template.txt' %}
 
 {# Delete the package API, if requested #}
-{% if nodoc is defined and nodoc %}
+{% if noapi is defined and noapi %}
   {% template_specialize_rename 'README.rst' %}
   {% template_specialize_rename 'doc' %}
   {% template_specialize_rename 'src/package-name/package_name.py' %}
@@ -21,7 +21,7 @@
 {% endif %}
 
 {# Delete the fallback unit test file, unless its needed #}
-{% if (nodoc is not defined or not nodoc) or (nomain is not defined or not nomain) %}
+{% if (noapi is not defined or not noapi) or (nomain is not defined or not nomain) %}
 {% template_specialize_rename 'src/tests/test.py' %}
 {% endif %}
 

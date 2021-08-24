@@ -14,5 +14,5 @@ This project is developed using [Python Build](https://github.com/craigahobbs/py
 using [python-template](https://github.com/craigahobbs/python-template#readme) as follows:
 
 ```
-template-specialize python-template/template/ package-name/ -k package package-name -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k nodoc 1 -k nomain 1
+template-specialize python-template/template/ package-name/ -k package package-name -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 1 -k nomain 1
 ```

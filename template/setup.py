@@ -1,6 +1,6 @@
 # Licensed under the MIT License
 # https://github.com/{{github}}/{{package}}/blob/main/LICENSE
-{% if nodoc is not defined or not nodoc %}
+{% if noapi is not defined or not noapi %}
 # pylint: disable=missing-function-docstring, missing-module-docstring
 {% endif %}
 import os
@@ -10,7 +10,7 @@ from setuptools import setup
 
 def main():
     # Read the readme for use as the long description
-    with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'README{{".md" if nodoc is defined and nodoc else ".rst"}}'), encoding='utf-8') as readme_file:
+    with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'README{{".md" if noapi is defined and noapi else ".rst"}}'), encoding='utf-8') as readme_file:
         long_description = readme_file.read()
 
     # Do the setup
@@ -18,7 +18,7 @@ def main():
         name='{{package}}',
         description='{{package}}',
         long_description=long_description,
-        long_description_content_type='{{ "text/markdown" if nodoc is defined and nodoc else "text/x-rst" }}',
+        long_description_content_type='{{ "text/markdown" if noapi is defined and noapi else "text/x-rst" }}',
         version='0.9.0',
         author='{{name}}',
         author_email='{{email}}',
