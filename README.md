@@ -40,6 +40,6 @@ The template exposes the following template variables:
 
 - **github** - the package author's GitHub account name (e.g. "johndoe")
 
-- **noapi** (optional) - if true, the package API and documentation is omitted
+- **noapi** (optional) - if true, the package API and documentation are omitted
 
 - **nomain** (optional) - if true, the command-line script and package main are omitted
