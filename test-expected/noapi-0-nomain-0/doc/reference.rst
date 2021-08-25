@@ -5,4 +5,4 @@ Reference
 sum_numbers
 -----------
 
-.. autofunction:: package_name.sum_numbers
+.. autofunction:: my_package.sum_numbers

@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'package-name'
+project = 'my-package'
 copyright = '2021, John Doe'
 author = 'John Doe'
 
@@ -71,7 +71,7 @@ html_show_sourcelink = False
 autosectionlabel_prefix_document = True
 autosectionlabel_maxdepth = 2
 
-doctest_global_setup = 'import package_name'
+doctest_global_setup = 'import my_package'
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3', None)

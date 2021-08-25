@@ -1,5 +1,5 @@
 # Licensed under the MIT License
-# https://github.com/johndoe/package-name/blob/main/LICENSE
+# https://github.com/johndoe/my-package/blob/main/LICENSE
 
 # pylint: disable=missing-function-docstring, missing-module-docstring
 
@@ -15,15 +15,15 @@ def main():
 
     # Do the setup
     setup(
-        name='package-name',
-        description='package-name',
+        name='my-package',
+        description='my-package',
         long_description=long_description,
         long_description_content_type='text/x-rst',
         version='0.9.0',
         author='John Doe',
         author_email='johndoe@gmail.com',
-        keywords='package-name',
-        url='https://github.com/johndoe/package-name',
+        keywords='my-package',
+        url='https://github.com/johndoe/my-package',
         license='MIT',
         classifiers=[
             'Development Status :: 5 - Production/Stable',
@@ -38,10 +38,10 @@ def main():
             'Topic :: Utilities'
         ],
         package_dir={'': 'src'},
-        packages=['package_name'],
+        packages=['my_package'],
         entry_points={
             'console_scripts': [
-                'package-name = package_name.main:main'
+                'my-package = my_package.main:main'
             ]
         }
     )

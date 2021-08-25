@@ -1,2 +1,2 @@
 # Licensed under the MIT License
-# https://github.com/johndoe/package-name/blob/main/LICENSE
+# https://github.com/johndoe/my-package/blob/main/LICENSE

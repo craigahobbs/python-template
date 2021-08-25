@@ -42,19 +42,19 @@ test:
 	@echo Tests completed - all passed
 
 $(eval $(call TEST_RULE, required, \
-    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe'))
+    -k package 'my-package' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe'))
 
 $(eval $(call TEST_RULE, noapi, \
-    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 1))
+    -k package 'my-package' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 1))
 
 $(eval $(call TEST_RULE, nomain, \
-    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k nomain 1))
+    -k package 'my-package' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k nomain 1))
 
 $(eval $(call TEST_RULE, noapi-nomain, \
-    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 1 -k nomain 1))
+    -k package 'my-package' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 1 -k nomain 1))
 
 $(eval $(call TEST_RULE, noapi-0-nomain-0, \
-    -k package 'package-name' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 0 -k nomain 0))
+    -k package 'my-package' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 0 -k nomain 0))
 
 
 .PHONY: changelog

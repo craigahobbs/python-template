@@ -1,12 +1,12 @@
 # Licensed under the MIT License
-# https://github.com/johndoe/package-name/blob/main/LICENSE
+# https://github.com/johndoe/my-package/blob/main/LICENSE
 
 import unittest
 
-import package_name
+import my_package
 
 
 class Test(unittest.TestCase):
 
     def test_import(self):
-        self.assertTrue(package_name)
+        self.assertTrue(my_package)

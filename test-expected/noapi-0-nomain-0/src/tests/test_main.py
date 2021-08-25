@@ -1,5 +1,5 @@
 # Licensed under the MIT License
-# https://github.com/johndoe/package-name/blob/main/LICENSE
+# https://github.com/johndoe/my-package/blob/main/LICENSE
 
 # pylint: disable=missing-class-docstring, missing-function-docstring, missing-module-docstring
 
@@ -7,14 +7,14 @@ from io import StringIO
 import unittest
 from unittest.mock import patch
 
-import package_name.__main__
-from package_name.main import main
+import my_package.__main__
+from my_package.main import main
 
 
 class TestMain(unittest.TestCase):
 
     def test_main_submodule(self):
-        self.assertTrue(package_name.__main__)
+        self.assertTrue(my_package.__main__)
 
     def test_main(self):
         with patch('sys.stdout', StringIO()) as stdout, \
