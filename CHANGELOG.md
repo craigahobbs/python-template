@@ -1,3 +1,9 @@
+## 2021-08-26
+
+- [8b20bf0](https://github.com/craigahobbs/python-template/commit/8b20bf0) - rename to python-build
+
+- [f6c9f52](https://github.com/craigahobbs/python-template/commit/f6c9f52) - update readme
+
 ## 2021-08-24
 
 - [1a09dfc](https://github.com/craigahobbs/python-template/commit/1a09dfc) - rename nodoc option to noapi
