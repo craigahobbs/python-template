@@ -12,6 +12,8 @@ Generated projects have the following functionality:
 
 - ready to upload to [PyPI](https://pypi.org/)
 
+- a license file ([MIT License](https://choosealicense.com/licenses/mit/))
+
 - 100% unit-test code coverage, enforced
 
 
