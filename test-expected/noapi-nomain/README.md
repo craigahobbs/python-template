@@ -10,7 +10,7 @@ Coming soon!
 
 ## Development
 
-This project is developed using [Python Build](https://github.com/craigahobbs/python-build#readme). It was started
+This project is developed using [python-build](https://github.com/craigahobbs/python-build#readme). It was started
 using [python-template](https://github.com/craigahobbs/python-template#readme) as follows:
 
 ```

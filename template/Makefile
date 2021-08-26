@@ -1,7 +1,7 @@
 # Licensed under the MIT License
 # https://github.com/{{github}}/{{package}}/blob/main/LICENSE
 
-# Download Python Build
+# Download python-build
 define WGET
 ifeq '$$(wildcard $(notdir $(1)))' ''
 $$(info Downloading $(notdir $(1)))
@@ -15,7 +15,7 @@ $(eval $(call WGET, https://raw.githubusercontent.com/craigahobbs/python-build/m
 # Sphinx documentation directory
 SPHINX_DOC := doc
 {% endif %}
-# Include Python Build
+# Include python-build
 include Makefile.base
 
 clean:
