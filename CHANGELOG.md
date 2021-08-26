@@ -6,11 +6,7 @@
 
 ## 2021-08-18
 
-- [d02a94e](https://github.com/craigahobbs/python-template/commit/d02a94e) - Don't use unittest-parallel - docker on mac is too unsable. Also, allow use of NO_DOCKER in rendered template compile tests.
-
 - [3c9cd84](https://github.com/craigahobbs/python-template/commit/3c9cd84) - pylint pragma cleanup
-
-- [8aee63d](https://github.com/craigahobbs/python-template/commit/8aee63d) - run unit tests in parallel
 
 ## 2021-08-17
 
