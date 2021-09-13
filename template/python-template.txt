@@ -22,7 +22,7 @@
 
 {# Delete the fallback unit test file, unless its needed #}
 {% if (noapi is not defined or not noapi) or (nomain is not defined or not nomain) %}
-{% template_specialize_rename 'src/tests/test.py' %}
+  {% template_specialize_rename 'src/tests/test.py' %}
 {% endif %}
 
 {# Rename package source directory #}
