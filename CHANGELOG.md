@@ -1,3 +1,7 @@
+## 2022-02-01
+
+- [1be43a7](https://github.com/craigahobbs/python-template/commit/1be43a7) - update template for 2022
+
 ## 2021-08-26
 
 - [8b20bf0](https://github.com/craigahobbs/python-template/commit/8b20bf0) - rename to python-build
