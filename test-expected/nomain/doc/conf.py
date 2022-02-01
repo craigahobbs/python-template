@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'my-package'
-copyright = '2021, John Doe'
+copyright = '2022, John Doe'
 author = 'John Doe'
 
 # The full version, including alpha/beta/rc tags
