@@ -33,7 +33,7 @@ Links
 Development
 -----------
 
-This project is developed using `python-build <https://github.com/craigahobbs/python-build#readme>`__. It was started
-using `python-template <https://github.com/craigahobbs/python-template#readme>`__ as follows::
+This package is developed using `python-build <https://github.com/craigahobbs/python-build#readme>`__.
+It was started using `python-template <https://github.com/craigahobbs/python-template#readme>`__ as follows::
 
     template-specialize python-template/template/ my-package/ -k package my-package -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe'

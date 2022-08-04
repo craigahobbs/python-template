@@ -10,8 +10,8 @@ Coming soon!
 
 ## Development
 
-This project is developed using [python-build](https://github.com/craigahobbs/python-build#readme). It was started
-using [python-template](https://github.com/craigahobbs/python-template#readme) as follows:
+This package is developed using [python-build](https://github.com/craigahobbs/python-build#readme).
+It was started using [python-template](https://github.com/craigahobbs/python-template#readme) as follows:
 
 ```
 template-specialize python-template/template/ my-package/ -k package my-package -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 1
