@@ -1,3 +1,7 @@
+## 2022-08-04
+
+- [2dc0fde](https://github.com/craigahobbs/python-template/commit/2dc0fde) - template cleanup
+
 ## 2022-02-01
 
 - [1be43a7](https://github.com/craigahobbs/python-template/commit/1be43a7) - update template for 2022
