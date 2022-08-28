@@ -1,3 +1,5 @@
+# Changelog
+
 ## 2022-08-22
 
 - [48aa1e4](https://github.com/craigahobbs/python-template/commit/48aa1e4) - remove sphinx-rtd-theme
