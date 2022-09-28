@@ -2,7 +2,6 @@
 
 **python-template** is a Python project template for use with
 [template-specialize](https://github.com/craigahobbs/template-specialize#readme).
-Generated projects have the following functionality:
 
 - creates a new Python package project
 
