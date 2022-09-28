@@ -3,25 +3,18 @@
 **python-template** is a Python project template for use with
 [template-specialize](https://github.com/craigahobbs/template-specialize#readme).
 
-- creates a new Python package project
-
-  - optional command-line script and package main
-
-- build/development experience using [python-build](https://github.com/craigahobbs/python-build#readme)
-
-- runs unit tests with [unittest](https://docs.python.org/3/library/unittest.html)
-
-  - optionally run unit tests with [unittest-parallel](https://github.com/craigahobbs/unittest-parallel#readme)
-
-- code coverage using [coverage](https://github.com/nedbat/coveragepy#readme)
-
+- Creates a new Python package project
+  - Optional command-line script and package main
+- Development experience using [python-build](https://github.com/craigahobbs/python-build#readme)
+- Run unit tests with [unittest](https://docs.python.org/3/library/unittest.html)
+  - Run unit tests with all actively maintained Python versions
+  - Optionally run tests with [unittest-parallel](https://pypi.org/project/unittest-parallel/)
+- Code coverage using [coverage](https://pypi.org/project/coverage/)
   - 100% code coverage enforced (configurable)
-
-- optionally generates package documentation with [Sphinx](https://www.sphinx-doc.org/en/master/)
-
-- package ready to upload to [PyPI](https://pypi.org/)
-
-- contains a license file ([MIT License](https://choosealicense.com/licenses/mit/))
+- Static code analysis using [pylint](https://pypi.org/project/pylint/)
+- Package documentation using [Sphinx](https://pypi.org/project/Sphinx/)
+- Publish the package to [PyPI](https://pypi.org/)
+- Publish documentation to [GitHub Pages](https://pages.github.com/)
 
 
 ## Create a New Python Project
