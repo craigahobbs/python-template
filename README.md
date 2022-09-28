@@ -1,26 +1,34 @@
 # python-template
 
 **python-template** is a Python project template for use with
-[template-specialize](https://pypi.org/project/template-specialize/).
+[template-specialize](https://github.com/craigahobbs/template-specialize#readme).
 Generated projects have the following functionality:
 
-- complete build/development experience using [python-build](https://github.com/craigahobbs/python-build#readme)
+- creates a new Python package project
 
-- command-line script and [package main](https://docs.python.org/3/library/__main__.html) (optional)
+  - optional command-line script and package main
 
-- API documentation with [Sphinx](https://pypi.org/project/Sphinx/) (optional)
+- build/development experience using [python-build](https://github.com/craigahobbs/python-build#readme)
 
-- ready to upload to [PyPI](https://pypi.org/)
+- runs unit tests with [unittest](https://docs.python.org/3/library/unittest.html)
 
-- a license file ([MIT License](https://choosealicense.com/licenses/mit/))
+  - optionally run unit tests with [unittest-parallel](https://github.com/craigahobbs/unittest-parallel#readme)
 
-- 100% unit-test code coverage, enforced
+- code coverage using [coverage](https://github.com/nedbat/coveragepy#readme)
+
+  - 100% code coverage enforced (configurable)
+
+- optionally generates package documentation with [Sphinx](https://www.sphinx-doc.org/en/master/)
+
+- package ready to upload to [PyPI](https://pypi.org/)
+
+- contains a license file ([MIT License](https://choosealicense.com/licenses/mit/))
 
 
 ## Create a New Python Project
 
 To create a new Python project, clone this repository and render the template using
-[template-specialize](https://pypi.org/project/template-specialize/). For example:
+[template-specialize](https://github.com/craigahobbs/template-specialize#readme). For example:
 
 ~~~
 template-specialize python-template/template/ my-package/ \
@@ -53,9 +61,8 @@ It provides commands for running unit tests on all supported Python versions (wi
 running static code analysis, building API documentation, publishing API documentation to GitHub Pages,
 creating and updating a changelog file, and publishing the package to PyPI.
 
-Here are a few basic commands to help you get started.
-For more detailed documentation, see the
-[python-build documentation](https://github.com/craigahobbs/python-build#readme).
+Here are a few basic commands to help you get started. For more detailed documentation, see the
+[python-build documentation](https://github.com/craigahobbs/python-build#contents).
 
 Before any commit, run the **make commit** command to run all tests:
 
