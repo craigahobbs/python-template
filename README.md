@@ -1,7 +1,7 @@
 # python-template
 
 **python-template** is a Python project template for use with
-[template-specialize](https://github.com/craigahobbs/template-specialize#readme).
+[template-specialize](https://pypi.org/project/template-specialize/).
 
 - Creates a new Python package project
   - Optional command-line script and package main
@@ -20,7 +20,7 @@
 ## Create a New Python Project
 
 To create a new Python project, clone this repository and render the template using
-[template-specialize](https://github.com/craigahobbs/template-specialize#readme). For example:
+[template-specialize](https://pypi.org/project/template-specialize/). For example:
 
 ~~~
 template-specialize python-template/template/ my-package/ \
