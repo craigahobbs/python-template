@@ -118,7 +118,8 @@ The default project structure is as follows:
 |   |-- conf.py
 |   |-- index.rst
 |   `-- reference.rst
-|-- setup.py
+|-- pyproject.toml
+|-- setup.cfg
 `-- src
     |-- __init__.py
     |-- my_package
@@ -140,7 +141,8 @@ directory are removed. Notice also that the project now contains a "README.md" f
 |-- LICENSE
 |-- Makefile
 |-- README.md
-|-- setup.py
+|-- pyproject.toml
+|-- setup.cfg
 `-- src
     |-- __init__.py
     |-- my_package
@@ -159,7 +161,8 @@ If you further set the **nomain** template argument, the command-line script and
 |-- LICENSE
 |-- Makefile
 |-- README.md
-|-- setup.py
+|-- pyproject.toml
+|-- setup.cfg
 `-- src
     |-- __init__.py
     |-- my_package
