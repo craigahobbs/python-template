@@ -2,6 +2,8 @@
 
 ## 2022-10-31
 
+- [be03eb8](https://github.com/craigahobbs/python-template/commit/be03eb8) - always set long_description_content_type
+
 - [781a982](https://github.com/craigahobbs/python-template/commit/781a982) - add pyproject.toml and setup.cfg, remove setup.py
 
 ## 2022-08-22
