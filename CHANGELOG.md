@@ -1,5 +1,9 @@
 # Changelog
 
+## 2022-10-31
+
+- [781a982](https://github.com/craigahobbs/python-template/commit/781a982) - add pyproject.toml and setup.cfg, remove setup.py
+
 ## 2022-08-22
 
 - [48aa1e4](https://github.com/craigahobbs/python-template/commit/48aa1e4) - remove sphinx-rtd-theme
