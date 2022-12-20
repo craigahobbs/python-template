@@ -25,15 +25,16 @@ Coming soon!
 Links
 -----
 
-- `Documentation on GitHub Pages <https://johndoe.github.io/my-package/>`__
-- `Package on pypi <https://pypi.org/project/my-package/>`__
-- `Source code on GitHub <https://github.com/johndoe/my-package>`__
+- `API Documentation <https://johndoe.github.io/my-package/>`__
+- `Source code <https://github.com/johndoe/my-package>`__
 
 
 Development
 -----------
 
 This package is developed using `python-build <https://github.com/craigahobbs/python-build#readme>`__.
-It was started using `python-template <https://github.com/craigahobbs/python-template#readme>`__ as follows::
+It was started using `python-template <https://github.com/craigahobbs/python-template#readme>`__ as follows:
+
+.. code-block:: sh
 
     template-specialize python-template/template/ my-package/ -k package my-package -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k nomain 1
