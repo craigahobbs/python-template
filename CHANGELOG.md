@@ -1,5 +1,9 @@
 # Changelog
 
+## 2022-12-19
+
+- [1e4568d](https://github.com/craigahobbs/python-template/commit/1e4568d) - update template readme
+
 ## 2022-10-31
 
 - [be03eb8](https://github.com/craigahobbs/python-template/commit/be03eb8) - always set long_description_content_type
