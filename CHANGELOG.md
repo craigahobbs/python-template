@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023-06-28
+
+- [b279137](https://github.com/craigahobbs/python-template/commit/b279137) - add python 3.12 support, remove python 3.7 support \(end-of-life\)
+
 ## 2022-12-19
 
 - [1e4568d](https://github.com/craigahobbs/python-template/commit/1e4568d) - update template readme
