@@ -27,7 +27,7 @@ gh-pages:
 superclean: clean
 
 
-# Test rule function - name, template args
+# Test rule function - name, template args, *env
 define TEST_RULE
 test: test-$(strip $(1))
 
@@ -37,7 +37,7 @@ test-$(strip $(1)): build/venv.build
 	rm -rf test-actual/$(strip $(1))/
 	build/venv/bin/template-specialize template/ test-actual/$(strip $(1))/ $(strip $(2))
 	diff -r test-actual/$(strip $(1))/ test-expected/$(strip $(1))/
-	$$(MAKE) $(MAKEJ) -C test-actual/$(strip $(1))/ commit
+	$(if $(3),$(strip $(3)) )$$(MAKE) $(MAKEJ) -C test-actual/$(strip $(1))/ commit
 	rm -rf test-actual/$(strip $(1))/
 endef
 
@@ -61,7 +61,8 @@ $(eval $(call TEST_RULE, noapi-nomain, \
     -k package 'my-package' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 1 -k nomain 1))
 
 $(eval $(call TEST_RULE, noapi-0-nomain-0, \
-    -k package 'my-package' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 0 -k nomain 0))
+    -k package 'my-package' -k name 'John Doe' -k email 'johndoe@gmail.com' -k github 'johndoe' -k noapi 0 -k nomain 0, \
+    UNITTEST_PARALLEL=1))
 
 
 .PHONY: changelog
