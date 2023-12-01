@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = '{{package}}'
-copyright = '2022, {{name}}'
+copyright = '{{now.year}}, {{name}}'
 author = '{{name}}'
 
 # The full version, including alpha/beta/rc tags
