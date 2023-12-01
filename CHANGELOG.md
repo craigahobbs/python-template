@@ -1,5 +1,9 @@
 # Changelog
 
+## 2023-12-01
+
+- [761b66a](https://github.com/craigahobbs/python-template/commit/761b66a) - use current year instead of a hard-coded year
+
 ## 2023-06-28
 
 - [b279137](https://github.com/craigahobbs/python-template/commit/b279137) - add python 3.12 support, remove python 3.7 support \(end-of-life\)
