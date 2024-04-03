@@ -12,8 +12,10 @@ WGET_CMD = if which wget; then wget -q -c $(1); else curl -f -Os $(1); fi
 $(eval $(call WGET, https://raw.githubusercontent.com/craigahobbs/python-build/main/Makefile.base))
 $(eval $(call WGET, https://raw.githubusercontent.com/craigahobbs/python-build/main/pylintrc))
 
+
 # Include python-build
 include Makefile.base
+
 
 clean:
 	rm -rf Makefile.base pylintrc

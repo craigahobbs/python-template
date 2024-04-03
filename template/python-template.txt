@@ -3,12 +3,10 @@
 
 {# Delete the package API, if requested #}
 {% if noapi is defined and noapi %}
-  {% template_specialize_rename 'README.rst' %}
   {% template_specialize_rename 'doc' %}
   {% template_specialize_rename 'src/package-name/package_name.py' %}
   {% template_specialize_rename 'src/tests/test_package_name.py' %}
 {% else %}
-  {% template_specialize_rename 'README.md' %}
   {% template_specialize_rename 'src/package-name/package_name.py', package.replace('-', '_') + '.py' %}
   {% template_specialize_rename 'src/tests/test_package_name.py', 'test_' + package.replace('-', '_') + '.py' %}
 {% endif %}

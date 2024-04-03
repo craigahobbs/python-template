@@ -1,8 +1,8 @@
-Reference
-=========
+# Reference
 
 
-sum_numbers
------------
+## sum_numbers
 
+~~~ {eval-rst}
 .. autofunction:: {{ package | replace('-', '_') }}.sum_numbers
+~~~

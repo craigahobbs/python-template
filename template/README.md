@@ -10,7 +10,10 @@ Coming soon!
 
 ## Links
 
-- [Source code](https://github.com/{{github}}/{{package}})
+{% if noapi is not defined or not noapi -%}
+- [API Documentation](https://{{github}}.github.io/{{package}}/)
+{% endif -%}
+ - [Source code](https://github.com/{{github}}/{{package}})
 
 
 ## Development
