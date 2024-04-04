@@ -1,5 +1,9 @@
 # Changelog
 
+## 2024-04-04
+
+- [7156801](https://github.com/craigahobbs/python-template/commit/7156801) - convert docs to markdown
+
 ## 2023-12-01
 
 - [761b66a](https://github.com/craigahobbs/python-template/commit/761b66a) - use current year instead of a hard-coded year
