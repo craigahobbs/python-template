@@ -113,11 +113,11 @@ The default project structure is as follows:
 |-- .gitignore
 |-- LICENSE
 |-- Makefile
-|-- README.rst
+|-- README.md
 |-- doc
 |   |-- conf.py
-|   |-- index.rst
-|   `-- reference.rst
+|   |-- index.md
+|   `-- reference.md
 |-- pyproject.toml
 |-- setup.cfg
 `-- src
@@ -134,7 +134,7 @@ The default project structure is as follows:
 ~~~
 
 If you set the **noapi** template argument, the package API source files and the Sphinx documentation project
-directory are removed. Notice also that the project now contains a "README.md" file instead of a "README.rst" file.
+directory are removed.
 
 ~~~
 |-- .gitignore
