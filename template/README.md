@@ -8,14 +8,14 @@
 Coming soon!
 
 
+{% if noapi is not defined or not noapi -%}
 ## Links
 
-{% if noapi is not defined or not noapi -%}
 - [API Documentation](https://{{github}}.github.io/{{package}}/)
+- [Source code](https://github.com/{{github}}/{{package}})
+
+
 {% endif -%}
- - [Source code](https://github.com/{{github}}/{{package}})
-
-
 ## Development
 
 This package is developed using [python-build](https://github.com/craigahobbs/python-build#readme).
