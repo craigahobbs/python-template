@@ -2,6 +2,8 @@
 
 ## 2024-04-11
 
+- [5d31c43](https://github.com/craigahobbs/python-template/commit/5d31c43) - remove licenses from empty __init__.py files
+
 - [fd37710](https://github.com/craigahobbs/python-template/commit/fd37710) - eliminate readme links sections if noapi
 
 ## 2024-04-04
