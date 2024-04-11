@@ -1,5 +1,9 @@
 # Changelog
 
+## 2024-04-11
+
+- [fd37710](https://github.com/craigahobbs/python-template/commit/fd37710) - eliminate readme links sections if noapi
+
 ## 2024-04-04
 
 - [7156801](https://github.com/craigahobbs/python-template/commit/7156801) - convert docs to markdown
