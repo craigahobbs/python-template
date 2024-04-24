@@ -1,5 +1,9 @@
 # Changelog
 
+## 2024-04-24
+
+- [8fb0639](https://github.com/craigahobbs/python-template/commit/8fb0639) - add pylint args comment in template Makefile
+
 ## 2024-04-11
 
 - [f55ec0d](https://github.com/craigahobbs/python-template/commit/f55ec0d) - remove unused package
