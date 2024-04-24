@@ -22,9 +22,11 @@ TESTS_REQUIRE := myst-parser
 
 # Include python-build
 include Makefile.base
+{% if noapi is defined and noapi %}
 
+# Disable pylint docstring warnings
+PYLINT_ARGS := $(PYLINT_ARGS) --disable=missing-class-docstring --disable=missing-function-docstring --disable=missing-module-docstring
+{% endif %}
 
 clean:
-	rm -rf Makefile.base pylintrc{% if noapi is defined and noapi %}
-
-PYLINT_ARGS := $(PYLINT_ARGS) --disable=missing-class-docstring --disable=missing-function-docstring --disable=missing-module-docstring{% endif %}
+	rm -rf Makefile.base pylintrc

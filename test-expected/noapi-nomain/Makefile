@@ -17,7 +17,9 @@ $(eval $(call WGET, https://raw.githubusercontent.com/craigahobbs/python-build/m
 include Makefile.base
 
 
+# Disable pylint docstring warnings
+PYLINT_ARGS := $(PYLINT_ARGS) --disable=missing-class-docstring --disable=missing-function-docstring --disable=missing-module-docstring
+
+
 clean:
 	rm -rf Makefile.base pylintrc
-
-PYLINT_ARGS := $(PYLINT_ARGS) --disable=missing-class-docstring --disable=missing-function-docstring --disable=missing-module-docstring
