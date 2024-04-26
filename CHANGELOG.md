@@ -1,5 +1,9 @@
 # Changelog
 
+## 2024-04-26
+
+- [dcd662a](https://github.com/craigahobbs/python-template/commit/dcd662a) - update python-build
+
 ## 2024-04-24
 
 - [8fb0639](https://github.com/craigahobbs/python-template/commit/8fb0639) - add pylint args comment in template Makefile
