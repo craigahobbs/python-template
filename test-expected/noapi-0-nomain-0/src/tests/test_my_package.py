@@ -13,5 +13,6 @@ class TestMyPackage(unittest.TestCase):
     def test_sum_numbers(self):
         self.assertEqual(sum_numbers([1, 2, 3]), 6)
 
+
     def test_sum_numbers_empty(self):
         self.assertEqual(sum_numbers([]), 0)
