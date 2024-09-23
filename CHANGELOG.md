@@ -1,5 +1,11 @@
 # Changelog
 
+## 2024-09-23
+
+- [bd4c81f](https://github.com/craigahobbs/python-template/commit/bd4c81f) - tweak spacing
+
+- [c671a52](https://github.com/craigahobbs/python-template/commit/c671a52) - update python-build download
+
 ## 2024-04-26
 
 - [dcd662a](https://github.com/craigahobbs/python-template/commit/dcd662a) - update python-build
