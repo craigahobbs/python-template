@@ -1,5 +1,9 @@
 # Changelog
 
+## 2024-10-02
+
+- [4206c2d](https://github.com/craigahobbs/python-template/commit/4206c2d) - add Python 3.13, remove Python 3.8 \(end-of-life\)
+
 ## 2024-09-23
 
 - [bd4c81f](https://github.com/craigahobbs/python-template/commit/bd4c81f) - tweak spacing
