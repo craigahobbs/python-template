@@ -1,5 +1,13 @@
 # Changelog
 
+## 2025-03-04
+
+- [1c05fb8](https://github.com/craigahobbs/python-template/commit/1c05fb8) - update python-build stub
+
+## 2025-03-03
+
+- [c2f3804](https://github.com/craigahobbs/python-template/commit/c2f3804) - update python-build stub
+
 ## 2024-10-02
 
 - [4206c2d](https://github.com/craigahobbs/python-template/commit/4206c2d) - add Python 3.13, remove Python 3.8 \(end-of-life\)
