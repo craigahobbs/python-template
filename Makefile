@@ -43,7 +43,7 @@ test-$(strip $(1)): build/venv.build
 	$(call SED_FILE, 's/[0-9]{4}(,? John Doe)/YYYY\1/g', test-actual/$(strip $(1))/LICENSE)
 	$(call SED_FILE, 's/[0-9]{4}(,? John Doe)/YYYY\1/g', test-actual/$(strip $(1))/doc/conf.py)
 	diff -r test-actual/$(strip $(1))/ test-expected/$(strip $(1))/
-	$(if $(3),$(strip $(3)) )$$(MAKE) $(MAKEJ) -C test-actual/$(strip $(1))/ commit
+	PYTHON_BUILD_DIR=../../../python-build $(if $(3),$(strip $(3)) )$$(MAKE) $(MAKEJ) -C test-actual/$(strip $(1))/ commit
 	rm -rf test-actual/$(strip $(1))/
 endef
 
