@@ -1,5 +1,13 @@
 # Changelog
 
+## 2025-05-09
+
+- [e790ab0](https://github.com/craigahobbs/python-template/commit/e790ab0) - add Python 3.14
+
+## 2025-03-23
+
+- [d450042](https://github.com/craigahobbs/python-template/commit/d450042) - remove setup.cfg license classifier
+
 ## 2025-03-04
 
 - [1c05fb8](https://github.com/craigahobbs/python-template/commit/1c05fb8) - update python-build stub
