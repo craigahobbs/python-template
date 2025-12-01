@@ -6,6 +6,7 @@ my-package command-line script main module
 """
 
 import argparse
+import sys
 
 
 def main(argv=None):
@@ -14,7 +15,10 @@ def main(argv=None):
     """
 
     # Command line arguments
-    parser = argparse.ArgumentParser(prog='my-package', color=False)
+    argument_parser_args = {'prog': 'my-package'}
+    if sys.version_info >= (3, 14): # pragma: no cover
+        argument_parser_args['color'] = False
+    parser = argparse.ArgumentParser(**argument_parser_args)
     parser.add_argument('numbers', metavar='N', type=float, nargs='+',
                         help='an integer for the accumulator')
     args = parser.parse_args(args=argv)
