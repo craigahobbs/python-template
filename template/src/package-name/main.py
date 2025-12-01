@@ -14,7 +14,7 @@ def main(argv=None):
     """
 
     # Command line arguments
-    parser = argparse.ArgumentParser(prog='{{package}}')
+    parser = argparse.ArgumentParser(prog='{{package}}', color=False)
     parser.add_argument('numbers', metavar='N', type=float, nargs='+',
                         help='an integer for the accumulator')
     args = parser.parse_args(args=argv)
