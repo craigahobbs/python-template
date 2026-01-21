@@ -1,5 +1,19 @@
 # Changelog
 
+## 2025-12-01
+
+- [85feb28](https://github.com/craigahobbs/python-template/commit/85feb28) - ArgumentParser color=False
+
+- [992e2a2](https://github.com/craigahobbs/python-template/commit/992e2a2) - ArgumentParser color=False
+
+## 2025-10-07
+
+- [5e7e864](https://github.com/craigahobbs/python-template/commit/5e7e864) - remove python 3.9
+
+## 2025-05-10
+
+- [16d9876](https://github.com/craigahobbs/python-template/commit/16d9876) - update python-build stub
+
 ## 2025-05-09
 
 - [e790ab0](https://github.com/craigahobbs/python-template/commit/e790ab0) - add Python 3.14
