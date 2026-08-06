@@ -1,2 +1,37 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{package}}"
+version = "0.9.0"
+description = "{{package}}"
+readme = "README.md"
+license = "MIT"
+keywords = ["{{package}}"]
+authors = [
+    {name = "{{name}}", email = "{{email}}"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+{% if nomain is not defined or not nomain %}    "Environment :: Console",
+{% endif %}    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Topic :: Utilities"
+]
+
+[project.urls]
+Homepage = "https://github.com/{{github}}/{{package}}"
+{% if nomain is not defined or not nomain %}
+[project.scripts]
+{{package}} = "{{package | replace("-", "_")}}.main:main"
+{% endif %}
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["{{package | replace("-", "_")}}"]

@@ -1,2 +1,37 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-package"
+version = "0.9.0"
+description = "my-package"
+readme = "README.md"
+license = "MIT"
+keywords = ["my-package"]
+authors = [
+    {name = "John Doe", email = "johndoe@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Topic :: Utilities"
+]
+
+[project.urls]
+Homepage = "https://github.com/johndoe/my-package"
+
+[project.scripts]
+my-package = "my_package.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["my_package"]

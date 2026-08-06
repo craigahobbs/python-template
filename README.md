@@ -119,7 +119,6 @@ The default project structure is as follows:
 |   |-- index.md
 |   `-- reference.md
 |-- pyproject.toml
-|-- setup.cfg
 `-- src
     |-- __init__.py
     |-- my_package
@@ -142,7 +141,6 @@ directory are removed.
 |-- Makefile
 |-- README.md
 |-- pyproject.toml
-|-- setup.cfg
 `-- src
     |-- __init__.py
     |-- my_package
@@ -162,7 +160,6 @@ If you further set the **nomain** template argument, the command-line script and
 |-- Makefile
 |-- README.md
 |-- pyproject.toml
-|-- setup.cfg
 `-- src
     |-- __init__.py
     |-- my_package
